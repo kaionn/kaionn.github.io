@@ -8,7 +8,7 @@ interface SkillRow {
 const SKILLS: readonly SkillRow[] = [
   {
     category: "Backend",
-    description: "Go(gRPC / errgroup 等の並行処理設計)",
+    description: "Rails / Go(gRPC / errgroup 等の並行処理設計)",
   },
   {
     category: "Frontend",
@@ -18,8 +18,6 @@ const SKILLS: readonly SkillRow[] = [
     category: "Infra",
     description: "AWS / Terraform(state 管理・plan 最適化)/ GitHub Actions",
   },
-  { category: "Mobile", description: "iOS(Swift / SwiftUI)" },
-  { category: "Other", description: "日英バイリンガル" },
 ];
 
 export default function Skills() {
