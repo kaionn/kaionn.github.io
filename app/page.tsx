@@ -7,13 +7,15 @@ import Skills from "@/components/Skills";
 
 export default function Home() {
   return (
-    <main className="mx-auto max-w-[720px] px-6">
+    <main className="mx-auto max-w-[960px] px-6">
       <Hero />
-      <About />
-      <Projects />
-      <Skills />
-      <Career />
-      <Contact />
+      <div className="flex flex-col gap-10 pb-16 sm:gap-14 sm:pb-24">
+        <About />
+        <Projects />
+        <Skills />
+        <Career />
+        <Contact />
+      </div>
     </main>
   );
 }

@@ -20,9 +20,20 @@ async function loadSignalLabMessage(): Promise<string> {
  */
 export default function LiveStatus() {
   return (
-    <ul className="flex flex-col gap-2">
-      <LiveStatusRow load={loadTechNewsDailyMessage} />
-      <LiveStatusRow load={loadSignalLabMessage} />
-    </ul>
+    <div className="rounded-lg border border-line bg-gradient-to-b from-panel to-panel-deep p-4 shadow-[inset_0_1px_0_0_rgba(230,234,242,0.05),0_12px_28px_-16px_rgba(0,0,0,0.75)] sm:p-5">
+      <div className="mb-3 flex items-center gap-2">
+        <span
+          className="h-2 w-2 shrink-0 rounded-full bg-status shadow-[0_0_8px_2px_rgba(251,191,36,0.45)] animate-status-pulse motion-reduce:animate-none"
+          aria-hidden="true"
+        />
+        <p className="font-mono text-xs uppercase tracking-widest text-muted">
+          LIVE
+        </p>
+      </div>
+      <ul className="flex flex-col gap-2">
+        <LiveStatusRow load={loadTechNewsDailyMessage} />
+        <LiveStatusRow load={loadSignalLabMessage} />
+      </ul>
+    </div>
   );
 }

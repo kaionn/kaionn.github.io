@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { IBM_Plex_Mono, Noto_Sans_JP, Space_Grotesk } from "next/font/google";
 import type { ReactNode } from "react";
 import { SITE_DESCRIPTION, SITE_TITLE } from "@/lib/config";
@@ -28,6 +28,10 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: SITE_TITLE,
   description: SITE_DESCRIPTION,
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0B1220",
 };
 
 interface RootLayoutProps {

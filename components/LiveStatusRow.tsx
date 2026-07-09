@@ -44,7 +44,7 @@ export default function LiveStatusRow({ load }: LiveStatusRowProps) {
 
   if (state.status === "loading") {
     return (
-      <li className="flex items-center gap-2 font-mono text-sm text-ink/60">
+      <li className="flex items-center gap-2 font-mono text-sm text-muted">
         <span className="h-2 w-2 rounded-full bg-line" aria-hidden="true" />
         <span className="h-4 w-48 animate-pulse rounded bg-line/60 motion-reduce:animate-none" />
       </li>
@@ -52,9 +52,9 @@ export default function LiveStatusRow({ load }: LiveStatusRowProps) {
   }
 
   return (
-    <li className="flex items-center gap-2 font-mono text-sm text-ink">
+    <li className="flex items-center gap-2 font-mono text-sm text-text">
       <span
-        className="h-2 w-2 shrink-0 rounded-full bg-status animate-status-pulse motion-reduce:animate-none"
+        className="h-2 w-2 shrink-0 rounded-full bg-status shadow-[0_0_8px_2px_rgba(251,191,36,0.45)] animate-status-pulse motion-reduce:animate-none"
         aria-hidden="true"
       />
       <span>{state.message}</span>

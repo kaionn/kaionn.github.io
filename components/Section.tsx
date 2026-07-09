@@ -2,38 +2,26 @@ import type { ReactNode } from "react";
 
 interface SectionProps {
   readonly id?: string;
-  readonly heading?: string;
-  readonly eyebrow?: string;
-  readonly withTopDivider?: boolean;
+  readonly heading: string;
+  readonly index: number;
   readonly children: ReactNode;
 }
 
 /**
- * 各セクション共通のラッパー。1カラム読み物レイアウトの縦の間隔と
- * セクション間の罫線 (line色) を一元管理する。
+ * 各セクション共通のラッパー。計器盤のパネルヘッダーラベル
+ * (例: 01 / ABOUT) を先頭に置き、以降のパネル(children)を並べる。
  */
-export default function Section({
-  id,
-  heading,
-  eyebrow,
-  withTopDivider = true,
-  children,
-}: SectionProps) {
+export default function Section({ id, heading, index, children }: SectionProps) {
   return (
-    <section
-      id={id}
-      className={`py-12 sm:py-16 ${withTopDivider ? "border-t border-line" : ""}`}
-    >
-      {eyebrow ? (
-        <p className="mb-2 font-mono text-xs tracking-wide text-status uppercase">
-          {eyebrow}
+    <section id={id}>
+      <div className="mb-4 flex items-center gap-3">
+        <p className="shrink-0 font-mono text-xs uppercase tracking-widest text-muted">
+          <span className="text-signal">{String(index).padStart(2, "0")}</span>
+          {" / "}
+          {heading.toUpperCase()}
         </p>
-      ) : null}
-      {heading ? (
-        <h2 className="mb-6 font-heading text-2xl font-bold text-ink sm:text-3xl">
-          {heading}
-        </h2>
-      ) : null}
+        <span aria-hidden="true" className="h-px flex-1 bg-line" />
+      </div>
       {children}
     </section>
   );

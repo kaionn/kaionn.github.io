@@ -1,11 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-paper: #f7f8fa;
-  --color-ink: #1a2332;
-  --color-signal: #0f766e;
-  --color-status: #b45309;
-  --color-line: #d9dee5;
+  --color-bg: #0b1220;
+  --color-panel: #101a2e;
+  --color-panel-deep: #0b1424;
+  --color-text: #e6eaf2;
+  --color-muted: #8a94a6;
+  --color-signal: #2dd4bf;
+  --color-status: #fbbf24;
+  --color-line: #223047;
 
   --font-heading: var(--font-space-grotesk);
   --font-sans: var(--font-noto-sans-jp);
@@ -25,6 +28,12 @@
 }
 
 body {
-  background-color: var(--color-paper);
-  color: var(--color-ink);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  /* 計器盤の質感を出す極薄のドットグリッド (text色 4%程度) */
+  background-image: radial-gradient(
+    rgba(230, 234, 242, 0.04) 1px,
+    transparent 1px
+  );
+  background-size: 24px 24px;
 }

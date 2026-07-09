@@ -1,3 +1,4 @@
+import Panel from "@/components/Panel";
 import Section from "@/components/Section";
 
 interface SkillRow {
@@ -22,20 +23,22 @@ const SKILLS: readonly SkillRow[] = [
 
 export default function Skills() {
   return (
-    <Section id="skills" heading="Skills">
-      <dl className="space-y-3">
-        {SKILLS.map((skill) => (
-          <div
-            key={skill.category}
-            className="flex flex-col gap-1 sm:flex-row sm:gap-3"
-          >
-            <dt className="w-28 shrink-0 font-mono text-sm font-medium text-signal">
-              {skill.category}
-            </dt>
-            <dd className="text-base text-ink/80">{skill.description}</dd>
-          </div>
-        ))}
-      </dl>
+    <Section id="skills" heading="Skills" index={3}>
+      <Panel>
+        <dl className="space-y-3">
+          {SKILLS.map((skill) => (
+            <div
+              key={skill.category}
+              className="flex flex-col gap-1 sm:flex-row sm:gap-3"
+            >
+              <dt className="w-28 shrink-0 font-mono text-sm font-medium text-signal">
+                {skill.category}
+              </dt>
+              <dd className="text-base text-text/80">{skill.description}</dd>
+            </div>
+          ))}
+        </dl>
+      </Panel>
     </Section>
   );
 }

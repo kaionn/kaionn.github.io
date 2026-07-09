@@ -10,13 +10,13 @@ const DECISIONS: readonly string[] = [
 export default function ProjectSignalLab() {
   return (
     <article>
-      <h3 className="mb-1 font-heading text-xl font-bold text-ink">
+      <h3 className="mb-1 font-heading text-xl font-bold text-text">
         signal-lab — 検証ファースト開発の実験機構
       </h3>
 
-      <div className="mt-4 space-y-4 text-base leading-relaxed text-ink/80">
+      <div className="mt-4 space-y-4 text-base leading-relaxed text-text/80">
         <div>
-          <p className="mb-1 font-mono text-xs uppercase tracking-wide text-status">
+          <p className="mb-1 font-mono text-xs uppercase tracking-wide text-muted">
             課題
           </p>
           <p>
@@ -25,7 +25,7 @@ export default function ProjectSignalLab() {
         </div>
 
         <div>
-          <p className="mb-1 font-mono text-xs uppercase tracking-wide text-status">
+          <p className="mb-1 font-mono text-xs uppercase tracking-wide text-muted">
             仕組み
           </p>
           <p className="mb-4">
@@ -35,7 +35,7 @@ export default function ProjectSignalLab() {
         </div>
 
         <div>
-          <p className="mb-1 font-mono text-xs uppercase tracking-wide text-status">
+          <p className="mb-1 font-mono text-xs uppercase tracking-wide text-muted">
             技術的な判断
           </p>
           <ul className="list-disc space-y-1 pl-5">

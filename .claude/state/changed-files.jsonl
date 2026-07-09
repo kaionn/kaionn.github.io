@@ -27,3 +27,11 @@
 {"file":"app/page.tsx","action":"Write","timestamp":"2026-07-09T11:36:22Z","important":false}
 {"file":".github/workflows/deploy.yml","action":"Write","timestamp":"2026-07-09T11:36:46Z","important":false}
 {"file":"/Users/aucks/.claude/learnings.md","action":"Edit","timestamp":"2026-07-09T11:56:31Z","important":false}
+{"file":"components/Panel.tsx","action":"Write","timestamp":"2026-07-09T13:23:19Z","important":false}
+{"file":"docs/design.md","action":"Edit","timestamp":"2026-07-09T13:30:31Z","important":false}
+{"file":"app/globals.css","action":"Edit","timestamp":"2026-07-09T13:44:56Z","important":false}
+{"file":"components/Section.tsx","action":"Edit","timestamp":"2026-07-09T13:45:37Z","important":false}
+{"file":"components/LiveStatus.tsx","action":"Edit","timestamp":"2026-07-09T13:46:08Z","important":false}
+{"file":"components/LiveStatusRow.tsx","action":"Edit","timestamp":"2026-07-09T13:46:29Z","important":false}
+{"file":"components/Hero.tsx","action":"Edit","timestamp":"2026-07-09T13:46:46Z","important":false}
+{"file":"components/PipelineDiagram.tsx","action":"Edit","timestamp":"2026-07-09T13:47:01Z","important":false}
