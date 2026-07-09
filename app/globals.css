@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f7f8fa;
+  --color-ink: #1a2332;
+  --color-signal: #0f766e;
+  --color-status: #b45309;
+  --color-line: #d9dee5;
+
+  --font-heading: var(--font-space-grotesk);
+  --font-sans: var(--font-noto-sans-jp);
+  --font-mono: var(--font-ibm-plex-mono);
+
+  --animate-status-pulse: status-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes status-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+}
