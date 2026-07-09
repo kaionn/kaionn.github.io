@@ -2,9 +2,9 @@ import PipelineDiagram from "@/components/PipelineDiagram";
 import { SIGNAL_LAB_GITHUB_URL, SIGNAL_LAB_LIVE_URL } from "@/lib/config";
 
 const DECISIONS: readonly string[] = [
-  "撤退基準(verdict-rules.yaml)を人間の感覚ではなく設定ファイルに固定し、週次で機械的に判定させた",
-  "Probe を「動くマイクロツール」と「LP + 待機リスト」の2型に分け、案の規模で使い分けた",
-  "GitHub Actions を状態機械として使い、Issue / PR / デプロイを接続した",
+  "撤退基準は設定ファイル(verdict-rules.yaml)に固定し、週次で機械的に判定。思い入れで延命しない",
+  "Probe は「動くマイクロツール」と「LP + 待機リスト」の 2 型に分け、案の規模で使い分ける",
+  "GitHub Actions を状態機械として使い、Issue / PR / デプロイをつないだ",
 ];
 
 export default function ProjectSignalLab() {
@@ -20,7 +20,10 @@ export default function ProjectSignalLab() {
             課題
           </p>
           <p>
-            旧機構ではアイデアから MVP を自動生成していたが、84案を生成して公開に至ったのは1本のみ。原因は「人間の判断がデータの前に置かれ、実験単価が高すぎた」こと。
+            以前の仕組みはアイデアから MVP を自動生成するものでしたが、84
+            案を作って公開までいけたのは 1
+            本だけでした。作る前に人間の判断を挟みすぎて、1
+            回の実験が重すぎたのが敗因です。
           </p>
         </div>
 
@@ -29,7 +32,9 @@ export default function ProjectSignalLab() {
             仕組み
           </p>
           <p className="mb-4">
-            判断コストを人間からデータに移し、実験単価を「PR 1本分」まで下げた。
+            続ける・やめるの判断をデータに任せて、実験 1 回のコストを PR 1
+            本分まで下げています。人間がやるのは Issue を立てることと merge
+            することだけです。
           </p>
           <PipelineDiagram />
         </div>

@@ -5,7 +5,7 @@ import Section from "@/components/Section";
 
 export default function Projects() {
   return (
-    <Section id="projects" heading="Projects" index={2}>
+    <Section id="projects" heading="Hobby Projects" index={2}>
       <div className="flex flex-col gap-6">
         <Panel>
           <ProjectSignalLab />

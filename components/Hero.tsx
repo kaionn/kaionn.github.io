@@ -12,8 +12,8 @@ export default function Hero() {
       <p className="mb-8 max-w-xl text-base leading-relaxed text-text/80 sm:text-lg">
         作って終わりにしない。
         <br />
-        設計からインフラ、CI/CD まで —
-        動き続ける仕組みごと届けるエンジニアです。
+        設計からインフラ、CI/CD
+        まで、動き続ける仕組みごと届けるエンジニアです。
       </p>
 
       <LiveStatus />
@@ -23,7 +23,7 @@ export default function Hero() {
           href="#projects"
           className="rounded-md border border-signal px-5 py-2.5 text-sm font-medium text-text transition-all hover:bg-signal/10 hover:shadow-[0_0_20px_-4px_rgba(45,212,191,0.5)]"
         >
-          Projects を見る
+          作ったものを見る
         </a>
         <a
           href={`https://github.com/${GITHUB_USERNAME}`}

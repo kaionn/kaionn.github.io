@@ -7,12 +7,12 @@ export default function About() {
       <Panel>
         <div className="space-y-4 text-base leading-relaxed text-text/80">
           <p>
-            フルスタックエンジニア。業務では Rails / Go
-            によるバックエンド開発、React / Next.js のフロントエンド、Terraform +
-            GitHub Actions による AWS インフラの構築・運用まで一貫して担当。
+            フルスタックエンジニアです。業務では Rails / Go
+            でバックエンドを書き、React / Next.js のフロントエンドから、Terraform
+            + GitHub Actions による AWS の構築・運用まで担当しています。
           </p>
           <p>
-            個人では「小さく作って市場に聞く」検証ファースト開発を実践し、アイデア収集から公開・撤退判定までを自動化した仕組みを運用している。
+            個人開発では「小さく作って市場に聞く」を方針に、アイデア集めから公開、撤退判定までを自動化した仕組みを回しています。
           </p>
         </div>
       </Panel>

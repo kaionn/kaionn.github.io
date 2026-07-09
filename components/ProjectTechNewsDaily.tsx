@@ -4,8 +4,8 @@ import {
 } from "@/lib/config";
 
 const DECISIONS: readonly string[] = [
-  "配信基盤を持たず「静的 HTML + Pages」に寄せ、運用コストをゼロに近づけた",
-  "アーカイブ退避を仕組みに含め、蓄積が壊れない構造にした",
+  "配信基盤を持たず、静的 HTML + GitHub Pages に寄せて運用コストをほぼゼロにした",
+  "アーカイブ退避まで仕組みに含めて、履歴が壊れない構造にした",
 ];
 
 export default function ProjectTechNewsDaily() {
@@ -21,7 +21,7 @@ export default function ProjectTechNewsDaily() {
             課題
           </p>
           <p>
-            技術ニュースの収集は毎日発生する定型作業。既存サービスの「量が多すぎる/興味領域と合わない」問題を、自分専用の自動パイプラインで解決した。
+            技術ニュースのチェックは毎日のことなのに、既存のサービスは量が多すぎたり興味とずれたりしていました。それなら自分専用の配信を作ってしまおう、というのが出発点です。
           </p>
         </div>
 
@@ -30,8 +30,11 @@ export default function ProjectTechNewsDaily() {
             仕組み
           </p>
           <p>
-            毎朝、Claude Code のルーチンが WebSearch でニュースを収集し、HTML
-            を生成して GitHub Pages に自動デプロイ。前日分はアーカイブへ退避。人の手を介さず、公開から履歴管理までが毎日完結する。ヒーロー直下のライブステータス行は、このリポジトリの最新コミット日時と連動している。
+            毎朝、Claude Code のルーチンがニュースを集めて HTML を組み、GitHub
+            Pages
+            へ自動デプロイします。前日分はアーカイブに退避するので、公開から履歴管理まで人の手はかかりません。冒頭の
+            LIVE
+            に出ている配信時刻は、このリポジトリの最新コミットとつながっています。
           </p>
         </div>
 
