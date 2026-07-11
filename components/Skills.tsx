@@ -1,44 +1,46 @@
-import Panel from "@/components/Panel";
-import Section from "@/components/Section";
-
-interface SkillRow {
-  readonly category: string;
-  readonly description: string;
+interface SkillCategory {
+  readonly label: string;
+  readonly color: "accent" | "teal" | "neutral";
+  readonly items: readonly string[];
 }
 
-const SKILLS: readonly SkillRow[] = [
-  {
-    category: "Backend",
-    description: "Rails / Go(gRPC / errgroup 等の並行処理設計)",
-  },
-  {
-    category: "Frontend",
-    description: "React / Next.js / Tailwind CSS / shadcn/ui",
-  },
-  {
-    category: "Infra",
-    description: "AWS / Terraform(state 管理・plan 最適化)/ GitHub Actions",
-  },
+const SKILLS: readonly SkillCategory[] = [
+  { label: "Backend", color: "teal", items: ["Rails", "Go", "gRPC"] },
+  { label: "Frontend", color: "accent", items: ["TypeScript", "React", "Next.js"] },
+  { label: "Infra", color: "neutral", items: ["AWS", "Terraform", "GitHub Actions"] },
 ];
+
+const TAG_STYLES = {
+  accent: "bg-accent/15 text-accent-light",
+  teal: "bg-teal/15 text-teal-light",
+  neutral: "bg-white/8 text-text",
+} as const;
 
 export default function Skills() {
   return (
-    <Section id="skills" heading="Skills" index={3}>
-      <Panel>
-        <dl className="space-y-3">
-          {SKILLS.map((skill) => (
-            <div
-              key={skill.category}
-              className="flex flex-col gap-1 sm:flex-row sm:gap-3"
-            >
-              <dt className="w-28 shrink-0 font-mono text-sm font-medium text-signal">
-                {skill.category}
-              </dt>
-              <dd className="text-base text-text/80">{skill.description}</dd>
+    <section id="skills">
+      <div className="mb-5 text-sm font-bold tracking-[0.14em] text-accent-light">
+        SKILLS
+      </div>
+      <div className="flex flex-col gap-[18px]">
+        {SKILLS.map((category) => (
+          <div key={category.label} className="flex items-baseline gap-5">
+            <div className="w-[100px] shrink-0 text-[13px] text-text/50">
+              {category.label}
             </div>
-          ))}
-        </dl>
-      </Panel>
-    </Section>
+            <div className="flex flex-wrap gap-2.5">
+              {category.items.map((item) => (
+                <span
+                  key={item}
+                  className={`rounded-full px-[18px] py-2 text-sm ${TAG_STYLES[category.color]}`}
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }

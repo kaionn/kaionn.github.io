@@ -1,37 +1,28 @@
-import GithubIcon from "@/components/icons/GithubIcon";
-import Panel from "@/components/Panel";
-import Section from "@/components/Section";
 import { CONTACT_EMAIL, GITHUB_USERNAME } from "@/lib/config";
 
 export default function Contact() {
   return (
-    <Section id="contact" heading="Contact" index={5}>
-      <Panel>
-        <ul className="flex flex-col gap-3 text-base text-text/80">
-          <li className="flex items-center gap-2">
-            <GithubIcon className="h-5 w-5 shrink-0 text-text/60" />
-            <a
-              href={`https://github.com/${GITHUB_USERNAME}`}
-              target="_blank"
-              rel="noreferrer"
-              className="text-signal underline-offset-4 hover:underline"
-            >
-              github.com/{GITHUB_USERNAME}
-            </a>
-          </li>
-          <li className="flex items-center gap-2">
-            <span aria-hidden="true" className="w-5 shrink-0 text-center">
-              @
-            </span>
-            <a
-              href={`mailto:${CONTACT_EMAIL}`}
-              className="text-signal underline-offset-4 hover:underline"
-            >
-              {CONTACT_EMAIL}
-            </a>
-          </li>
-        </ul>
-      </Panel>
-    </Section>
+    <section className="rounded-3xl border border-accent/30 bg-gradient-to-br from-accent/20 to-teal/12 p-12 text-center sm:p-14">
+      <h2 className="text-[28px] font-black">いっしょに何かつくりましょう</h2>
+      <p className="mt-3 text-[15px] text-text/70">
+        副業・業務委託のご相談も、技術の雑談も大歓迎です。
+      </p>
+      <div className="mt-7 flex flex-wrap justify-center gap-3.5 text-[15px]">
+        <a
+          href={`https://github.com/${GITHUB_USERNAME}`}
+          target="_blank"
+          rel="noreferrer"
+          className="rounded-full bg-white px-7 py-3 font-bold text-bg"
+        >
+          GitHub
+        </a>
+        <a
+          href={`mailto:${CONTACT_EMAIL}`}
+          className="rounded-full border border-text/30 px-7 py-3 transition-colors hover:border-accent/50 hover:text-accent-light"
+        >
+          Email
+        </a>
+      </div>
+    </section>
   );
 }

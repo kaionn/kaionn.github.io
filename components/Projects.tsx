@@ -1,19 +1,16 @@
-import Panel from "@/components/Panel";
 import ProjectSignalLab from "@/components/ProjectSignalLab";
 import ProjectTechNewsDaily from "@/components/ProjectTechNewsDaily";
-import Section from "@/components/Section";
 
 export default function Projects() {
   return (
-    <Section id="projects" heading="Hobby Projects" index={2}>
-      <div className="flex flex-col gap-6">
-        <Panel>
-          <ProjectSignalLab />
-        </Panel>
-        <Panel>
-          <ProjectTechNewsDaily />
-        </Panel>
+    <section id="hobby-projects">
+      <div className="mb-5 text-sm font-bold tracking-[0.14em] text-accent-light">
+        HOBBY PROJECTS
       </div>
-    </Section>
+      <div className="flex flex-col gap-4">
+        <ProjectSignalLab />
+        <ProjectTechNewsDaily />
+      </div>
+    </section>
   );
 }

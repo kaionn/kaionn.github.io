@@ -1,27 +1,20 @@
 import type { Metadata, Viewport } from "next";
-import { IBM_Plex_Mono, Noto_Sans_JP, Space_Grotesk } from "next/font/google";
+import { JetBrains_Mono, Zen_Kaku_Gothic_New } from "next/font/google";
 import type { ReactNode } from "react";
 import { SITE_DESCRIPTION, SITE_TITLE } from "@/lib/config";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
+const zenKakuGothicNew = Zen_Kaku_Gothic_New({
   subsets: ["latin"],
-  weight: ["500", "700"],
-  variable: "--font-space-grotesk",
+  weight: ["400", "700"],
+  variable: "--font-zen-kaku-gothic-new",
   display: "swap",
 });
 
-const notoSansJP = Noto_Sans_JP({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
-  variable: "--font-noto-sans-jp",
-  display: "swap",
-});
-
-const ibmPlexMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-ibm-plex-mono",
+  variable: "--font-jetbrains-mono",
   display: "swap",
 });
 
@@ -31,7 +24,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0B1220",
+  themeColor: "#0F1020",
 };
 
 interface RootLayoutProps {
@@ -42,7 +35,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="ja">
       <body
-        className={`${spaceGrotesk.variable} ${notoSansJP.variable} ${ibmPlexMono.variable} font-sans antialiased`}
+        className={`${zenKakuGothicNew.variable} ${jetbrainsMono.variable} font-sans antialiased`}
       >
         {children}
       </body>
