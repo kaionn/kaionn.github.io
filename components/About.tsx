@@ -5,9 +5,9 @@ export default function About() {
         ABOUT
       </div>
       <h2 className="mb-5 text-[34px] font-black leading-snug">
-        アイデアを、
+        つくって、回して、
         <span className="bg-gradient-to-r from-accent-light to-teal bg-clip-text text-transparent">
-          最速でかたちに。
+          放っておく。
         </span>
       </h2>
       <div className="max-w-[640px] space-y-4 text-base leading-[2.2] text-text/85">
