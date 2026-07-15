@@ -4,7 +4,7 @@ export default function About() {
       <div className="mb-4 text-sm font-bold tracking-[0.14em] text-accent-light">
         ABOUT
       </div>
-      <h2 className="mb-5 text-[34px] font-black leading-snug">
+      <h2 className="mb-5 text-[26px] font-black leading-snug md:text-[34px]">
         つくって、回して、
         <span className="bg-gradient-to-r from-accent-light to-teal bg-clip-text text-transparent">
           放っておく。

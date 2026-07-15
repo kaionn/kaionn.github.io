@@ -49,7 +49,7 @@ export default function Career() {
               className={`absolute -left-[7px] top-1.5 h-3 w-3 rounded-full ${entry.current ? "bg-accent" : "bg-accent/45"}`}
             />
             <div className="text-[13px] text-accent-light">{entry.period}</div>
-            <div className="mt-1 text-[17px] font-bold">
+            <div className="mt-1 text-[15px] font-bold md:text-[17px]">
               {entry.company} / {entry.role}
             </div>
             <div className="mt-1.5 text-sm leading-relaxed text-text/60">

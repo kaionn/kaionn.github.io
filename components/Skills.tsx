@@ -24,8 +24,11 @@ export default function Skills() {
       </div>
       <div className="flex flex-col gap-[18px]">
         {SKILLS.map((category) => (
-          <div key={category.label} className="flex items-baseline gap-5">
-            <div className="w-[100px] shrink-0 text-[13px] text-text/50">
+          <div
+            key={category.label}
+            className="flex flex-col gap-2 md:flex-row md:items-baseline md:gap-5"
+          >
+            <div className="shrink-0 text-[13px] text-text/50 md:w-[100px]">
               {category.label}
             </div>
             <div className="flex flex-wrap gap-2.5">

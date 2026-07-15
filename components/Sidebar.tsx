@@ -9,7 +9,7 @@ export default function Sidebar() {
         <img
           src="/avatar.jpg"
           alt="kaionn"
-          className="relative block h-[280px] w-full rounded-3xl border border-white/15 object-cover"
+          className="relative block h-[200px] w-full rounded-3xl border border-white/15 object-cover md:h-[280px]"
         />
       </div>
 
@@ -35,7 +35,7 @@ export default function Sidebar() {
       </p>
 
       {/* ナビゲーション */}
-      <nav className="mt-2 flex flex-col gap-1 text-sm">
+      <nav className="mt-2 hidden flex-col gap-1 text-sm md:flex">
         <a
           href="#about"
           className="rounded-xl px-4 py-2.5 text-text/75 transition-colors hover:bg-accent/12 hover:text-accent-light"

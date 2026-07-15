@@ -14,7 +14,7 @@ export default function Home() {
 
       <div className="relative grid md:grid-cols-[400px_1fr]">
         <Sidebar />
-        <main className="flex flex-col gap-[72px] px-6 py-12 md:max-w-[860px] md:px-[72px] md:py-[72px]">
+        <main className="flex flex-col gap-12 px-6 py-12 md:max-w-[860px] md:gap-[72px] md:px-[72px] md:py-[72px]">
           <About />
           <Skills />
           <Projects />
