@@ -2,14 +2,14 @@ import { CONTACT_EMAIL, GITHUB_USERNAME } from "@/lib/config";
 
 export default function Sidebar() {
   return (
-    <aside className="top-0 flex flex-col gap-6 border-b border-white/8 bg-white/[0.03] p-8 md:sticky md:h-screen md:overflow-y-auto md:border-b-0 md:border-r md:px-10 md:py-12">
-      {/* アバター */}
-      <div className="relative shrink-0">
+    <aside className="top-0 flex flex-col gap-6 border-b border-white/8 bg-white/[0.03] p-8 lg:sticky lg:h-screen lg:overflow-y-auto lg:border-b-0 lg:border-r lg:px-10 lg:py-12">
+      {/* アバター: 1 カラム時(〜lg)は全幅だと横長クロップになるため幅を制限する */}
+      <div className="relative max-w-[360px] shrink-0 lg:max-w-none">
         <div className="absolute -inset-3.5 rounded-[28px] bg-gradient-to-br from-accent/40 to-teal/25 blur-[24px]" />
         <img
           src="/avatar.jpg"
           alt="kaionn"
-          className="relative block h-[200px] w-full rounded-3xl border border-white/15 object-cover md:h-[280px]"
+          className="relative block h-[200px] w-full rounded-3xl border border-white/15 object-cover lg:h-[280px]"
         />
       </div>
 
@@ -35,7 +35,7 @@ export default function Sidebar() {
       </p>
 
       {/* ナビゲーション */}
-      <nav className="mt-2 hidden flex-col gap-1 text-sm md:flex">
+      <nav className="mt-2 hidden flex-col gap-1 text-sm lg:flex">
         <a
           href="#about"
           className="rounded-xl px-4 py-2.5 text-text/75 transition-colors hover:bg-accent/12 hover:text-accent-light"
