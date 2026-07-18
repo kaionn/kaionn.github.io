@@ -10,7 +10,7 @@ export const CONTACT_EMAIL = "kaion.engin@gmail.com";
 
 export const SITE_TITLE = "Kaion — Full-stack Engineer";
 export const SITE_DESCRIPTION =
-  "作って終わりにしない。設計からインフラ、CI/CD まで、動き続ける仕組みごと届けるフルスタックエンジニア。signal-lab / tech-news-daily を運用中。";
+  "作って終わりにしない。設計からインフラ、CI/CD まで、動き続ける仕組みごと届けるフルスタックエンジニア。signal-lab と、毎朝自動配信の tech-news / tech-learn を運用中。";
 
 export const SIGNAL_LAB_GITHUB_URL = "https://github.com/kaionn/signal-lab";
 export const SIGNAL_LAB_LIVE_URL = "https://signal-lab-six.vercel.app";
