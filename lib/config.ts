@@ -17,7 +17,7 @@ export const SIGNAL_LAB_LIVE_URL = "https://signal-lab-six.vercel.app";
 
 export const TECH_NEWS_DAILY_GITHUB_URL =
   "https://github.com/kaionn/tech-news-daily";
-export const TECH_NEWS_DAILY_LIVE_URL = "https://kaionn.github.io/tech-news-daily";
+export const TECH_NEWS_DAILY_LIVE_URL = "https://tech-news-daily-cfo.pages.dev";
 
 /** ライブステータス fetch 結果のキャッシュ有効期間 (ミリ秒) */
 export const LIVE_STATUS_CACHE_TTL_MS = 10 * 60 * 1000;
