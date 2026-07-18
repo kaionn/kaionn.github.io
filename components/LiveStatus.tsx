@@ -9,6 +9,11 @@ async function loadTechNewsDailyMessage(): Promise<string> {
   return `tech-news-daily — ${formatJstTimestamp(date)} に自動配信済み`;
 }
 
+async function loadTechLearningDailyMessage(): Promise<string> {
+  const date = await fetchLatestCommitDate("kaionn", "tech-learning-daily");
+  return `tech-learning-daily — ${formatJstTimestamp(date)} に自動配信済み`;
+}
+
 async function loadSignalLabMessage(): Promise<string> {
   const count = await fetchSignalLabProbeCount();
   return `signal-lab — 現在 ${count} 本の Probe が検証中`;
@@ -32,6 +37,7 @@ export default function LiveStatus() {
       </div>
       <ul className="flex flex-col gap-2">
         <LiveStatusRow load={loadTechNewsDailyMessage} />
+        <LiveStatusRow load={loadTechLearningDailyMessage} />
         <LiveStatusRow load={loadSignalLabMessage} />
       </ul>
     </div>

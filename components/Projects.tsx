@@ -1,5 +1,6 @@
 import ProjectSignalLab from "@/components/ProjectSignalLab";
 import ProjectTechNewsDaily from "@/components/ProjectTechNewsDaily";
+import ProjectTechLearningDaily from "@/components/ProjectTechLearningDaily";
 
 export default function Projects() {
   return (
@@ -10,6 +11,7 @@ export default function Projects() {
       <div className="flex flex-col gap-4">
         <ProjectSignalLab />
         <ProjectTechNewsDaily />
+        <ProjectTechLearningDaily />
       </div>
     </section>
   );
