@@ -1,15 +1,13 @@
 export default function About() {
   return (
     <section id="about">
-      <div className="mb-4 text-sm font-bold tracking-[0.14em] text-accent-light">
-        ABOUT
-      </div>
-      <h2 className="mb-5 text-[26px] font-black leading-snug md:text-[34px]">
+      <h2 className="section-heading"><span>01</span> ~/about</h2>
+      <h3 className="mb-5 text-[26px] font-black leading-snug md:text-[34px]">
         つくって、回して、
-        <span className="bg-gradient-to-r from-accent-light to-teal bg-clip-text text-transparent">
+        <span className="text-accent-light">
           放っておく。
         </span>
-      </h2>
+      </h3>
       <div className="max-w-[640px] space-y-4 text-base leading-[2.2] text-text/85">
         <p>
           フルスタックエンジニアです。業務では Rails / Go

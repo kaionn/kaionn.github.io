@@ -14,7 +14,8 @@ export default function PipelineDiagram() {
   return (
     <div
       className="overflow-x-auto rounded-xl border border-white/8 bg-bg/40 p-4"
-      role="img"
+      tabIndex={0}
+      role="region"
       aria-label={`パイプライン: ${PIPELINE_STEPS.join(" → ")}`}
     >
       <ol className="flex w-max items-center gap-2 font-mono text-xs sm:text-sm">

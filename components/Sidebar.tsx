@@ -1,103 +1,44 @@
 import { CONTACT_EMAIL, GITHUB_USERNAME } from "@/lib/config";
+import Image from "next/image";
+
+const NAV_ITEMS = [
+  ["01", "About", "about"],
+  ["02", "Skills", "skills"],
+  ["03", "Hobby Projects", "hobby-projects"],
+  ["04", "Career", "career"],
+  ["05", "Contact", "contact"],
+] as const;
 
 export default function Sidebar() {
   return (
-    <aside className="top-0 flex flex-col gap-6 border-b border-white/8 bg-white/[0.03] p-8 lg:sticky lg:h-screen lg:overflow-y-auto lg:border-b-0 lg:border-r lg:px-10 lg:py-12">
-      {/* アバター: 1 カラム時(〜lg)は全幅だと横長クロップになるため幅を制限する */}
-      <div className="relative max-w-[360px] shrink-0 lg:max-w-none">
-        <div className="absolute -inset-3.5 rounded-[28px] bg-gradient-to-br from-accent/40 to-teal/25 blur-[24px]" />
-        <img
-          src="/avatar.jpg"
-          alt="kaionn"
-          className="relative block h-[200px] w-full rounded-3xl border border-white/15 object-cover lg:h-[280px]"
-        />
+    <aside className="profile-sidebar">
+      <div className="profile-terminal" aria-hidden="true">kaionn@portfolio <span>~</span></div>
+      <div className="profile-identity">
+        <Image src="/avatar.jpg" alt="kaionn のアバター" width={88} height={88} className="profile-avatar" priority />
+        <svg className="terminal-bot" aria-hidden="true" viewBox="0 0 32 32" fill="none">
+          <path d="M16 3v5M13 3h6M6 10h20v17H6zM2 15h4M26 15h4M10 27v3M22 27v3" stroke="currentColor" strokeWidth="2" />
+          <path d="M10 15h3v3h-3zM19 15h3v3h-3zM12 22h8" stroke="currentColor" strokeWidth="2" />
+        </svg>
       </div>
-
-      {/* 名前・タイトル */}
       <div>
-        <div className="text-[32px] font-black">
-          kaionn<span className="text-accent">.</span>
-        </div>
-        <div className="mt-1 text-[15px] font-bold text-accent-light">
-          フルスタックエンジニア
-        </div>
+        <h1 className="profile-name">kaionn<span>.</span><svg className="dot-word" viewBox="0 0 32 7" aria-hidden="true"><defs><pattern id="letter-dots" width="2" height="2" patternUnits="userSpaceOnUse"><circle cx="0.7" cy="0.7" r="0.65" fill="currentColor" /></pattern></defs><path d="M0 0h5v1H1v2h3v1H1v2h4v1H0zM7 0h1l3 5V0h1v7h-1L8 2v5H7zM14 0h5v1h-4v5h3V4h-2V3h3v4h-5z" fill="url(#letter-dots)" /></svg></h1>
+        <p className="profile-role">フルスタックエンジニア</p>
+        <p className="profile-english">Full-stack Engineer</p>
       </div>
-
-      {/* 受付中バッジ */}
-      <div className="inline-flex w-fit items-center gap-2 self-start rounded-full border border-teal/30 bg-teal/12 px-4 py-2 text-[13px] font-bold text-teal-light">
-        <span className="h-2 w-2 rounded-full bg-teal" />
-        副業・業務委託 受付中
-      </div>
-
-      {/* キャッチコピー */}
-      <p className="text-sm leading-8 text-text/70">
-        アイデアを最速でかたちに。フロントエンドからインフラまで、ぜんぶ楽しくやるタイプです。
-      </p>
-
-      {/* ナビゲーション */}
-      <nav className="mt-2 hidden flex-col gap-1 text-sm lg:flex">
-        <a
-          href="#about"
-          className="rounded-xl px-4 py-2.5 text-text/75 transition-colors hover:bg-accent/12 hover:text-accent-light"
-        >
-          About
-        </a>
-        <a
-          href="#skills"
-          className="rounded-xl px-4 py-2.5 text-text/75 transition-colors hover:bg-accent/12 hover:text-accent-light"
-        >
-          Skills
-        </a>
-        <a
-          href="#hobby-projects"
-          className="rounded-xl px-4 py-2.5 text-text/75 transition-colors hover:bg-accent/12 hover:text-accent-light"
-        >
-          Hobby Projects
-        </a>
-        <a
-          href="#career"
-          className="rounded-xl px-4 py-2.5 text-text/75 transition-colors hover:bg-accent/12 hover:text-accent-light"
-        >
-          Career
-        </a>
+      <p className="profile-copy">アイデアを最速でかたちに。フロントエンドからインフラまで、ぜんぶ楽しくやるタイプです。</p>
+      <div className="availability"><span aria-hidden="true" />副業・業務委託 受付中</div>
+      <a href="#hobby-projects" className="primary-link">プロジェクトを見る <span aria-hidden="true">↗</span></a>
+      <nav className="section-nav" aria-label="セクションナビゲーション">
+        {NAV_ITEMS.map(([number, label, id]) => (
+          <a key={id} href={`#${id}`}><span>{number}</span><i aria-hidden="true" />{label}</a>
+        ))}
       </nav>
-
-      {/* CTA */}
-      <div className="mt-auto flex shrink-0 flex-col gap-2.5 text-sm">
-        <a
-          href={`mailto:${CONTACT_EMAIL}`}
-          className="rounded-full bg-gradient-to-r from-accent to-[#6C5CE7] px-6 py-3 text-center font-bold text-white shadow-[0_8px_30px_rgba(139,124,246,0.35)]"
-        >
-          お仕事のご相談
-        </a>
-        <div className="flex gap-2.5">
-          <a
-            href={`https://github.com/${GITHUB_USERNAME}`}
-            target="_blank"
-            rel="noreferrer"
-            className="flex-1 rounded-full border border-text/25 py-2.5 text-center transition-colors hover:border-accent/50 hover:text-accent-light"
-          >
-            GitHub
-          </a>
-          <a
-            href="https://x.com"
-            target="_blank"
-            rel="noreferrer"
-            className="flex-1 rounded-full border border-text/25 py-2.5 text-center transition-colors hover:border-accent/50 hover:text-accent-light"
-          >
-            X
-          </a>
-          <a
-            href={`mailto:${CONTACT_EMAIL}`}
-            className="flex-1 rounded-full border border-text/25 py-2.5 text-center transition-colors hover:border-accent/50 hover:text-accent-light"
-          >
-            Email
-          </a>
-        </div>
-        <div className="mt-1.5 text-center text-[11px] text-text/35">
-          © 2026 kaionn — kaionn.github.io
-        </div>
+      <div className="profile-links">
+        <a href={`https://github.com/${GITHUB_USERNAME}`} target="_blank" rel="noreferrer">GitHub ↗</a>
+        <a href="https://x.com" target="_blank" rel="noreferrer">X ↗</a>
+        <a href={`mailto:${CONTACT_EMAIL}`}>Email ↗</a>
       </div>
+      <a className="consult-link" href={`mailto:${CONTACT_EMAIL}`}>お仕事のご相談 →</a>
     </aside>
   );
 }
