@@ -5,10 +5,8 @@ import ProjectTechLearningDaily from "@/components/ProjectTechLearningDaily";
 export default function Projects() {
   return (
     <section id="hobby-projects">
-      <div className="mb-5 text-sm font-bold tracking-[0.14em] text-accent-light">
-        HOBBY PROJECTS
-      </div>
-      <div className="flex flex-col gap-4">
+      <h2 className="section-heading"><span>01</span> Hobby Projects</h2>
+      <div className="project-grid">
         <ProjectSignalLab />
         <ProjectTechNewsDaily />
         <ProjectTechLearningDaily />

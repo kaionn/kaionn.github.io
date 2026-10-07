@@ -9,15 +9,16 @@ const DECISIONS: readonly string[] = [
 
 export default function ProjectSignalLab() {
   return (
-    <article className="rounded-[18px] border border-accent/30 bg-gradient-to-br from-accent/[0.18] to-[#6C5CE7]/[0.06] p-7 sm:p-8">
+    <article className="project-card">
       <div className="text-xs font-bold tracking-[0.14em] text-accent-light">
         FEATURED
       </div>
       <h3 className="mt-2 text-xl font-bold">
-        signal-lab — 検証ファースト開発の実験機構
+        <span className="project-name">signal-lab</span>
+        <span className="project-subtitle">検証ファースト開発の実験機構</span>
       </h3>
 
-      <div className="mt-4 space-y-4 text-sm leading-relaxed text-text/75">
+      <div className="mt-4 space-y-4 text-sm leading-relaxed text-text/85">
         <p>
           以前の仕組みはアイデアから MVP を自動生成するものでしたが、84
           案を作って公開までいけたのは 1
@@ -25,7 +26,7 @@ export default function ProjectSignalLab() {
           本分まで下げています。
         </p>
         <PipelineDiagram />
-        <ul className="list-disc space-y-1 pl-5 text-text/65">
+        <ul className="list-disc space-y-1 pl-5 text-muted">
           {DECISIONS.map((d) => (
             <li key={d}>{d}</li>
           ))}

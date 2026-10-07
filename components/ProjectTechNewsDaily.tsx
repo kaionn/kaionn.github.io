@@ -7,17 +7,18 @@ const DECISIONS: readonly string[] = [
 
 export default function ProjectTechNewsDaily() {
   return (
-    <article className="rounded-[18px] border border-white/8 bg-white/[0.04] p-7 sm:p-8">
+    <article className="project-card">
       <h3 className="text-xl font-bold">
-        tech-news-daily — 毎朝届く自動生成ニュースダイジェスト
+        <span className="project-name">tech-news-daily</span>
+        <span className="project-subtitle">毎朝届く自動生成ニュースダイジェスト</span>
       </h3>
 
-      <div className="mt-4 space-y-4 text-sm leading-relaxed text-text/75">
+      <div className="mt-4 space-y-4 text-sm leading-relaxed text-text/85">
         <p>
           毎朝、Claude Code のルーチンがニュースを集めて HTML を組み、Cloudflare
           Pages へ自動デプロイします。前日分はアーカイブに退避するので、公開から履歴管理まで人の手はかかりません。
         </p>
-        <ul className="list-disc space-y-1 pl-5 text-text/65">
+        <ul className="list-disc space-y-1 pl-5 text-muted">
           {DECISIONS.map((d) => (
             <li key={d}>{d}</li>
           ))}

@@ -1,22 +1,7 @@
 import type { Metadata, Viewport } from "next";
-import { JetBrains_Mono, Zen_Kaku_Gothic_New } from "next/font/google";
 import type { ReactNode } from "react";
 import { SITE_DESCRIPTION, SITE_TITLE } from "@/lib/config";
 import "./globals.css";
-
-const zenKakuGothicNew = Zen_Kaku_Gothic_New({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-zen-kaku-gothic-new",
-  display: "swap",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-jetbrains-mono",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: SITE_TITLE,
@@ -24,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0F1020",
+  themeColor: "#0b1726",
 };
 
 interface RootLayoutProps {
@@ -35,7 +20,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="ja">
       <body
-        className={`${zenKakuGothicNew.variable} ${jetbrainsMono.variable} font-sans antialiased`}
+        className="font-sans antialiased"
       >
         {children}
       </body>
