@@ -3,8 +3,8 @@ import { CONTACT_EMAIL, GITHUB_USERNAME } from "@/lib/config";
 export default function Contact() {
   return (
     <section id="contact" className="contact-panel">
-      <h2 className="section-heading"><span>05</span> ~/contact</h2>
-      <h3 className="text-[22px] font-black sm:text-[28px]">いっしょに何かつくりましょう</h3>
+      <h2 className="section-heading"><span>05</span> Contact</h2>
+      <h3 className="text-[22px] font-bold sm:text-[28px]">いっしょに何かつくりましょう</h3>
       <p className="mt-3 text-[15px] text-text/70">
         副業・業務委託のご相談、お気軽にどうぞ。
       </p>

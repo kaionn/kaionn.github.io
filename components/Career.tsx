@@ -36,7 +36,7 @@ const CAREER_ENTRIES: readonly CareerEntry[] = [
 export default function Career() {
   return (
     <section id="career">
-      <h2 className="section-heading"><span>04</span> ~/career</h2>
+      <h2 className="section-heading"><span>04</span> Career</h2>
       <div className="ml-1.5 flex flex-col border-l-2 border-accent/30">
         {CAREER_ENTRIES.map((entry, i) => (
           <div

@@ -12,7 +12,8 @@ export default function ProjectTechLearningDaily() {
   return (
     <article className="project-card">
       <h3 className="text-xl font-bold">
-        tech-learning-daily — 毎朝届く技術基礎の解説サイト
+        <span className="project-name">tech-learning-daily</span>
+        <span className="project-subtitle">毎朝届く技術基礎の解説サイト</span>
       </h3>
 
       <div className="mt-4 space-y-4 text-sm leading-relaxed text-text/85">

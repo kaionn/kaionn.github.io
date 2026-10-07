@@ -7,28 +7,22 @@ const PIPELINE_STEPS: readonly string[] = [
 ];
 
 /**
- * signal-lab のパイプラインを横フロー図として表示する。
- * ページ本体を横スクロールさせないよう、図のコンテナ内だけで overflow-x させる。
+ * signal-lab の全工程を番号付きの縦一覧で表示する。
+ * 小さい画面でも横スクロールなしで工程の流れを読み取れる。
  */
 export default function PipelineDiagram() {
   return (
     <div
-      className="overflow-x-auto rounded-xl border border-white/8 bg-bg/40 p-4"
-      tabIndex={0}
+      className="pipeline-diagram rounded-lg border border-white/8 bg-bg/40 p-4"
       role="region"
       aria-label={`パイプライン: ${PIPELINE_STEPS.join(" → ")}`}
     >
-      <ol className="flex w-max items-center gap-2 font-mono text-xs sm:text-sm">
-        {PIPELINE_STEPS.map((step, index) => (
-          <li key={step} className="flex items-center gap-2">
-            <span className="whitespace-nowrap rounded border border-white/8 bg-bg px-3 py-2 text-text">
+      <ol className="pipeline-steps">
+        {PIPELINE_STEPS.map((step) => (
+          <li key={step} className="pipeline-step">
+            <span className="pipeline-label">
               {step}
             </span>
-            {index < PIPELINE_STEPS.length - 1 ? (
-              <span aria-hidden="true" className="text-accent-light">
-                →
-              </span>
-            ) : null}
           </li>
         ))}
       </ol>

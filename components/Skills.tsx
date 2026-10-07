@@ -19,7 +19,7 @@ const TAG_STYLES = {
 export default function Skills() {
   return (
     <section id="skills">
-      <h2 className="section-heading"><span>02</span> ~/skills</h2>
+      <h2 className="section-heading"><span>03</span> Skills</h2>
       <div className="flex flex-col gap-[18px]">
         {SKILLS.map((category) => (
           <div

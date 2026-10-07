@@ -12,16 +12,11 @@ const NAV_ITEMS = [
 export default function Sidebar() {
   return (
     <aside className="profile-sidebar">
-      <div className="profile-terminal" aria-hidden="true">kaionn@portfolio <span>~</span></div>
       <div className="profile-identity">
         <Image src="/avatar.jpg" alt="kaionn のアバター" width={88} height={88} className="profile-avatar" priority />
-        <svg className="terminal-bot" aria-hidden="true" viewBox="0 0 32 32" fill="none">
-          <path d="M16 3v5M13 3h6M6 10h20v17H6zM2 15h4M26 15h4M10 27v3M22 27v3" stroke="currentColor" strokeWidth="2" />
-          <path d="M10 15h3v3h-3zM19 15h3v3h-3zM12 22h8" stroke="currentColor" strokeWidth="2" />
-        </svg>
       </div>
       <div>
-        <h1 className="profile-name">kaionn<span>.</span><svg className="dot-word" viewBox="0 0 32 7" aria-hidden="true"><defs><pattern id="letter-dots" width="2" height="2" patternUnits="userSpaceOnUse"><circle cx="0.7" cy="0.7" r="0.65" fill="currentColor" /></pattern></defs><path d="M0 0h5v1H1v2h3v1H1v2h4v1H0zM7 0h1l3 5V0h1v7h-1L8 2v5H7zM14 0h5v1h-4v5h3V4h-2V3h3v4h-5z" fill="url(#letter-dots)" /></svg></h1>
+        <h1 className="profile-name">kaionn<span>.</span></h1>
         <p className="profile-role">フルスタックエンジニア</p>
         <p className="profile-english">Full-stack Engineer</p>
       </div>

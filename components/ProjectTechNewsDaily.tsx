@@ -9,7 +9,8 @@ export default function ProjectTechNewsDaily() {
   return (
     <article className="project-card">
       <h3 className="text-xl font-bold">
-        tech-news-daily — 毎朝届く自動生成ニュースダイジェスト
+        <span className="project-name">tech-news-daily</span>
+        <span className="project-subtitle">毎朝届く自動生成ニュースダイジェスト</span>
       </h3>
 
       <div className="mt-4 space-y-4 text-sm leading-relaxed text-text/85">

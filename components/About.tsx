@@ -1,14 +1,14 @@
 export default function About() {
   return (
     <section id="about">
-      <h2 className="section-heading"><span>01</span> ~/about</h2>
-      <h3 className="mb-5 text-[26px] font-black leading-snug md:text-[34px]">
+      <h2 className="section-heading"><span>02</span> About</h2>
+      <h3 className="about-title mb-5 text-[24px] font-bold leading-[1.5] md:text-[30px]">
         つくって、回して、
-        <span className="text-accent-light">
+        <span className="whitespace-nowrap text-accent-light">
           放っておく。
         </span>
       </h3>
-      <div className="max-w-[640px] space-y-4 text-base leading-[2.2] text-text/85">
+      <div className="max-w-[640px] space-y-4 text-base leading-[1.95] text-text/85">
         <p>
           フルスタックエンジニアです。業務では Rails / Go
           でバックエンドを書き、React / Next.js のフロントエンドから、Terraform

@@ -14,7 +14,8 @@ export default function ProjectSignalLab() {
         FEATURED
       </div>
       <h3 className="mt-2 text-xl font-bold">
-        signal-lab — 検証ファースト開発の実験機構
+        <span className="project-name">signal-lab</span>
+        <span className="project-subtitle">検証ファースト開発の実験機構</span>
       </h3>
 
       <div className="mt-4 space-y-4 text-sm leading-relaxed text-text/85">
