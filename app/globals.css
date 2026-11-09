@@ -41,7 +41,7 @@ body { background: var(--color-bg); color: var(--color-text); }
 ::selection { background: #79d9be40; }
 a, button { -webkit-tap-highlight-color: transparent; }
 a { transition: color .15s, border-color .15s, background-color .15s; }
-a:hover { color: var(--color-accent-light); }
+a:not(.astryx-button):hover { color: var(--color-accent-light); }
 :focus-visible { outline: 2px solid var(--color-accent-light); outline-offset: 5px; }
 section { scroll-margin-top: 32px; }
 .site-shell { min-height: 100vh; }
