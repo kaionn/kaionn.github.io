@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Badge } from "@astryxdesign/core/Badge";
 import { CONTACT_EMAIL, GITHUB_USERNAME } from "@/lib/config";
 
 export default function Hero() {
@@ -11,7 +12,7 @@ export default function Hero() {
       </div>
       <div className="hero-description">
         <p className="profile-copy">アイデアを最速でかたちに。フロントエンドからインフラまで、ぜんぶ楽しくやるタイプです。</p>
-        <p className="availability"><span aria-hidden="true" />副業・業務委託 受付中</p>
+        <Badge className="mt-6" variant="success" label="副業・業務委託 受付中" />
         <div className="hero-actions">
           <a href="#hobby-projects" className="primary-link">プロジェクトを見る <span aria-hidden="true">↗</span></a>
           <a className="consult-link" href={`mailto:${CONTACT_EMAIL}`}>お仕事のご相談 →</a>
