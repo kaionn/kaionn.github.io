@@ -10,6 +10,8 @@ export interface Work {
   readonly githubUrl?: string;
   readonly imageSrc: string;
   readonly imageAlt: string;
+  readonly imageWidth?: number;
+  readonly imageHeight?: number;
   readonly tags: readonly string[];
 }
 
@@ -45,11 +47,13 @@ export const WORKS: readonly Work[] = [
     id: "uragiri-reversi",
     group: "play",
     name: "裏切りリバーシ",
-    summary: "寝返った石がしゃべるリバーシです。ブラウザで遊べます。",
+    summary: "寝返った石が、しゃべる。ブラウザで遊べます。",
     liveUrl: "https://uragiri-reversi.kaion-engin.workers.dev/",
     liveLabel: "遊ぶ",
     imageSrc: "/works/uragiri-reversi.png",
-    imageAlt: "裏切りリバーシの題字と、石が吹き出しでしゃべる盤面",
+    imageAlt: "裏切りリバーシの題字と『寝返った石が、しゃべる。』の副題、石が吹き出しでしゃべる盤面",
+    imageWidth: 1200,
+    imageHeight: 630,
     tags: ["ゲーム", "ブラウザ", "AI 対戦"],
   },
   {
