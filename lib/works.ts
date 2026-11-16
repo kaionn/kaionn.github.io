@@ -37,8 +37,8 @@ export const WORKS: readonly Work[] = [
       "書いた線が、時間とともに空へ昇っていく書道です。ブラウザで遊べます。",
     liveUrl: "https://gravity-shodo.kaion-lab.com/",
     liveLabel: "遊ぶ",
-    imageSrc: "/works/gravity-shodo.jpg",
-    imageAlt: "重力に従わない書道教室の画面。お題と書き枠が表示されている",
+    imageSrc: "/works/gravity-shodo.png",
+    imageAlt: "重力に従わない書道教室の題字と「ふむ形は師範級じゃのう」",
     tags: ["ゲーム", "ブラウザ"],
   },
   {
