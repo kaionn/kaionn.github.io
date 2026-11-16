@@ -1,4 +1,4 @@
-import { CONTACT_EMAIL, GITHUB_USERNAME } from "@/lib/config";
+import { CONTACT_EMAIL, GITHUB_USERNAME, X_URL } from "@/lib/config";
 
 export default function Contact() {
   return (
@@ -16,6 +16,14 @@ export default function Contact() {
           className="rounded border border-accent bg-accent-light px-7 py-3 font-bold text-bg"
         >
           GitHub
+        </a>
+        <a
+          href={X_URL}
+          target="_blank"
+          rel="noreferrer"
+          className="rounded border border-text/30 px-7 py-3 transition-colors hover:border-accent/50 hover:text-accent-light"
+        >
+          X
         </a>
         <a
           href={`mailto:${CONTACT_EMAIL}`}

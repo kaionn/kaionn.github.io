@@ -7,7 +7,7 @@ interface SkillCategory {
 const SKILLS: readonly SkillCategory[] = [
   { label: "Backend", color: "teal", items: ["Rails", "Go", "gRPC"] },
   { label: "Frontend", color: "accent", items: ["TypeScript", "React", "Next.js"] },
-  { label: "Infra", color: "neutral", items: ["AWS", "Terraform", "GitHub Actions"] },
+  { label: "Infra", color: "neutral", items: ["AWS", "Terraform", "GitHub Actions", "Cloudflare"] },
 ];
 
 const TAG_STYLES = {
