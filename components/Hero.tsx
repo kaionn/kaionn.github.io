@@ -5,13 +5,13 @@ import { Heading } from "@astryxdesign/core/Heading";
 import { HStack } from "@astryxdesign/core/HStack";
 import { Link } from "@astryxdesign/core/Link";
 import { Text } from "@astryxdesign/core/Text";
-import { CONTACT_EMAIL, GITHUB_USERNAME } from "@/lib/config";
+import { CONTACT_EMAIL, GITHUB_AVATAR_URL, GITHUB_USERNAME } from "@/lib/config";
 
 export default function Hero() {
   return (
     <section className="hero" aria-labelledby="profile-name">
       <div className="hero-heading">
-        <HStack className="hero-intro"><Image src="/avatar.jpg" alt="kaionn のアバター" width={64} height={64} className="profile-avatar" priority /><Text as="p" type="inherit" display="block" color="secondary">Full-stack Engineer</Text></HStack>
+        <HStack className="hero-intro"><Image src={GITHUB_AVATAR_URL} alt="kaionn のアバター" width={64} height={64} className="profile-avatar" priority /><Text as="p" type="inherit" display="block" color="secondary">Full-stack Engineer</Text></HStack>
         <Heading level={1} type="display-1" id="profile-name">kaionn<span>.</span></Heading>
         <Text as="p" type="inherit" display="block" className="profile-role">フルスタックエンジニア</Text>
       </div>

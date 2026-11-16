@@ -6,6 +6,10 @@
 export const RESUME_URL: string | null = null;
 
 export const GITHUB_USERNAME = "kaionn";
+
+/** Hero / Sidebar は GitHub の現在のアイコンを参照する。s は表示幅 88px の 2〜3 倍。 */
+export const GITHUB_AVATAR_URL =
+  "https://avatars.githubusercontent.com/u/93774871?v=4&s=256";
 export const CONTACT_EMAIL = "kaion.engin@gmail.com";
 
 export const SITE_TITLE = "Kaion — Full-stack Engineer";

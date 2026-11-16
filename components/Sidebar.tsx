@@ -1,4 +1,4 @@
-import { CONTACT_EMAIL, GITHUB_USERNAME } from "@/lib/config";
+import { CONTACT_EMAIL, GITHUB_AVATAR_URL, GITHUB_USERNAME } from "@/lib/config";
 import Image from "next/image";
 
 const NAV_ITEMS = [
@@ -13,7 +13,7 @@ export default function Sidebar() {
   return (
     <aside className="profile-sidebar">
       <div className="profile-identity">
-        <Image src="/avatar.jpg" alt="kaionn のアバター" width={88} height={88} className="profile-avatar" priority />
+        <Image src={GITHUB_AVATAR_URL} alt="kaionn のアバター" width={88} height={88} className="profile-avatar" priority />
       </div>
       <div>
         <h1 className="profile-name">kaionn<span>.</span></h1>
