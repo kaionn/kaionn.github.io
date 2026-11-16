@@ -13,7 +13,6 @@ export const GITHUB_AVATAR_URL =
   "https://avatars.githubusercontent.com/u/93774871?v=4&s=256";
 export const CONTACT_EMAIL = "kaion.engin@gmail.com";
 export const X_URL = "https://x.com/kai0nnn";
-export const QIITA_URL = "https://qiita.com/kaion";
 
 export const SITE_TITLE = "kaionn — 遊べるゲームと、小さなウェブアプリ";
 export const SITE_DESCRIPTION =

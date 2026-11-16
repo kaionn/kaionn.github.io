@@ -36,3 +36,6 @@ next-env.d.ts
 
 # harness
 .harness-mem/
+
+# typescript incremental
+*.tsbuildinfo

@@ -6,6 +6,7 @@ import { WORK_GROUPS, WORKS } from "@/lib/works";
 export default function Works() {
   return (
     <section id="works">
+      <span id="hobby-projects" hidden />
       <Heading level={2} className="section-heading">
         <span>01</span> Works
       </Heading>
@@ -20,7 +21,7 @@ export default function Works() {
                 {group.intro}
               </Text>
             ) : null}
-            <div className={`project-grid${featured ? " project-grid-featured" : ""}`}>
+            <div className="project-grid">
               {works.map((work) => (
                 <WorkCard key={work.id} work={work} featured={featured} />
               ))}

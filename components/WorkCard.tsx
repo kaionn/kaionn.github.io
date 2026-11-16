@@ -24,7 +24,7 @@ export default function WorkCard({ work, featured = false }: WorkCardProps) {
             className="work-thumb"
           />
         </div>
-        <Heading level={3} className="text-xl font-bold">
+        <Heading level={4} className="text-xl font-bold">
           <span className="project-name">{work.name}</span>
         </Heading>
         <Text as="p" type="inherit" display="block" className="work-summary">

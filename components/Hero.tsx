@@ -9,7 +9,6 @@ import {
   CONTACT_EMAIL,
   GITHUB_AVATAR_URL,
   GITHUB_USERNAME,
-  QIITA_URL,
   X_URL,
 } from "@/lib/config";
 
@@ -73,15 +72,6 @@ export default function Hero() {
             color="secondary"
           >
             X ↗
-          </Link>
-          <Link
-            href={QIITA_URL}
-            target="_blank"
-            rel="noreferrer"
-            type="inherit"
-            color="secondary"
-          >
-            Qiita ↗
           </Link>
           <Link href={`mailto:${CONTACT_EMAIL}`} type="inherit" color="secondary">
             Email ↗
