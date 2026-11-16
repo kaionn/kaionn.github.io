@@ -15,12 +15,12 @@ export default function WorkCard({ work, featured = false }: WorkCardProps) {
   return (
     <article>
       <Card className={`project-card${featured ? " project-card-featured" : ""}`} height="100%">
-        <div className={`work-thumb-wrap${work.imageHeight === 630 ? " is-og" : ""}`}>
+        <div className="work-thumb-wrap">
           <Image
             src={work.imageSrc}
             alt={work.imageAlt}
             width={work.imageWidth ?? 1200}
-            height={work.imageHeight ?? 750}
+            height={work.imageHeight ?? 630}
             className="work-thumb"
           />
         </div>
