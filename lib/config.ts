@@ -5,16 +5,19 @@
  */
 export const RESUME_URL: string | null = null;
 
+export const SITE_URL = "https://kaionn.github.io";
 export const GITHUB_USERNAME = "kaionn";
 
-/** Hero / Sidebar は GitHub の現在のアイコンを参照する。s は表示幅 88px の 2〜3 倍。 */
+/** Hero は GitHub の現在のアイコンを参照する。s は表示幅の 2〜3 倍。 */
 export const GITHUB_AVATAR_URL =
   "https://avatars.githubusercontent.com/u/93774871?v=4&s=256";
 export const CONTACT_EMAIL = "kaion.engin@gmail.com";
+export const X_URL = "https://x.com/kai0nnn";
+export const QIITA_URL = "https://qiita.com/kaion";
 
-export const SITE_TITLE = "Kaion — Full-stack Engineer";
+export const SITE_TITLE = "kaionn — 遊べるゲームと、小さなウェブアプリ";
 export const SITE_DESCRIPTION =
-  "作って終わりにしない。設計からインフラ、CI/CD まで、動き続ける仕組みごと届けるフルスタックエンジニア。signal-lab と、毎朝自動配信の tech-news / tech-learn を運用中。";
+  "書いた線が空へ昇っていく書道、石が寝返るリバーシ、毎朝更新する技術ニュースと基礎解説。ブラウザで遊べる作品と、小さなウェブアプリを作っています。";
 
 export const SIGNAL_LAB_GITHUB_URL = "https://github.com/kaionn/signal-lab";
 export const SIGNAL_LAB_LIVE_URL = "https://signal-lab-six.vercel.app";
