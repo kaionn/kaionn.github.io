@@ -24,6 +24,11 @@ export default function WorkCard({ work, featured = false }: WorkCardProps) {
             className="work-thumb"
           />
         </div>
+        <ul className="work-tags" aria-label="タグ">
+          {work.tags.map((tag) => (
+            <li key={tag}>{tag}</li>
+          ))}
+        </ul>
         <Heading level={4} className="text-xl font-bold">
           <span className="project-name">{work.name}</span>
         </Heading>

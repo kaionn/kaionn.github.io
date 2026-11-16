@@ -1,5 +1,4 @@
 import { Link } from "@astryxdesign/core/Link";
-import { Text } from "@astryxdesign/core/Text";
 import { VStack } from "@astryxdesign/core/VStack";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -8,6 +7,7 @@ import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Career from "@/components/Career";
 import Contact from "@/components/Contact";
+import SiteFooter from "@/components/SiteFooter";
 
 export default function Home() {
   return (
@@ -24,11 +24,7 @@ export default function Home() {
           <Skills />
           <Career />
           <Contact />
-          <footer className="site-footer">
-            <Text type="inherit" color="inherit">
-              © 2026 kaionn · kaionn.github.io
-            </Text>
-          </footer>
+          <SiteFooter />
         </VStack>
       </div>
     </div>

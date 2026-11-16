@@ -10,6 +10,7 @@ export interface Work {
   readonly githubUrl?: string;
   readonly imageSrc: string;
   readonly imageAlt: string;
+  readonly tags: readonly string[];
 }
 
 export interface WorkGroup {
@@ -38,6 +39,7 @@ export const WORKS: readonly Work[] = [
     liveLabel: "遊ぶ",
     imageSrc: "/works/gravity-shodo.jpg",
     imageAlt: "重力に従わない書道教室の画面。お題と書き枠が表示されている",
+    tags: ["ゲーム", "ブラウザ"],
   },
   {
     id: "uragiri-reversi",
@@ -48,6 +50,7 @@ export const WORKS: readonly Work[] = [
     liveLabel: "遊ぶ",
     imageSrc: "/works/uragiri-reversi.jpg",
     imageAlt: "裏切りリバーシのタイトル画面。ふたりで対戦と AI と対戦が選べる",
+    tags: ["ゲーム", "ブラウザ", "AI 対戦"],
   },
   {
     id: "tech-news-daily",
@@ -59,6 +62,7 @@ export const WORKS: readonly Work[] = [
     githubUrl: "https://github.com/kaionn/tech-news-daily",
     imageSrc: "/works/tech-news-daily.jpg",
     imageAlt: "Tech News Daily の画面。当日のダイジェストと見出しが見える",
+    tags: ["自動更新", "ニュース", "コード公開"],
   },
   {
     id: "tech-learning-daily",
@@ -70,5 +74,6 @@ export const WORKS: readonly Work[] = [
     githubUrl: "https://github.com/kaionn/tech-learning-daily",
     imageSrc: "/works/tech-learning-daily.jpg",
     imageAlt: "Tech Learning Daily の画面。当日の解説記事が見える",
+    tags: ["自動更新", "技術解説", "コード公開"],
   },
 ];
