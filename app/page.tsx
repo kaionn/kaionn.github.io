@@ -1,3 +1,6 @@
+import { Link } from "@astryxdesign/core/Link";
+import { Text } from "@astryxdesign/core/Text";
+import { VStack } from "@astryxdesign/core/VStack";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -9,18 +12,18 @@ import Contact from "@/components/Contact";
 export default function Home() {
   return (
     <div className="site-shell" id="top">
-      <a className="skip-link" href="#main-content">本文へスキップ</a>
+      <Link className="skip-link" href="#main-content" type="inherit" color="inherit">本文へスキップ</Link>
       <div className="portfolio-layout">
         <Header />
-        <main id="main-content" tabIndex={-1} className="portfolio-main">
+        <VStack as="main" id="main-content" tabIndex={-1} className="portfolio-main">
           <Hero />
           <Projects />
           <About />
           <Skills />
           <Career />
           <Contact />
-          <footer className="site-footer">© 2026 kaionn · kaionn.github.io</footer>
-        </main>
+          <footer className="site-footer"><Text type="inherit" color="inherit">© 2026 kaionn · kaionn.github.io</Text></footer>
+        </VStack>
       </div>
     </div>
   );

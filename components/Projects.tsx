@@ -1,3 +1,4 @@
+import { Heading } from "@astryxdesign/core/Heading";
 import ProjectSignalLab from "@/components/ProjectSignalLab";
 import ProjectTechNewsDaily from "@/components/ProjectTechNewsDaily";
 import ProjectTechLearningDaily from "@/components/ProjectTechLearningDaily";
@@ -5,7 +6,7 @@ import ProjectTechLearningDaily from "@/components/ProjectTechLearningDaily";
 export default function Projects() {
   return (
     <section id="hobby-projects">
-      <h2 className="section-heading"><span>01</span> Hobby Projects</h2>
+      <Heading level={2} className="section-heading"><span>01</span> Hobby Projects</Heading>
       <div className="project-grid">
         <ProjectSignalLab />
         <ProjectTechNewsDaily />

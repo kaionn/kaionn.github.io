@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { SITE_DESCRIPTION, SITE_TITLE } from "@/lib/config";
 import "./globals.css";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: SITE_TITLE,
@@ -18,11 +19,11 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="ja">
+    <html lang="ja" data-theme="dark">
       <body
         className="font-sans antialiased"
       >
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

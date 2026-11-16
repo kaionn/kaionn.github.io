@@ -1,3 +1,5 @@
+import { Link } from "@astryxdesign/core/Link";
+
 const NAV_ITEMS = [
   ["About", "about"],
   ["Skills", "skills"],
@@ -9,9 +11,9 @@ const NAV_ITEMS = [
 export default function Header() {
   return (
     <header className="site-header">
-      <a href="#top" className="wordmark" aria-label="kaionn トップへ">kaionn<span aria-hidden="true">.</span></a>
+      <Link href="#top" label="kaionn トップへ" type="inherit" color="primary" className="wordmark">kaionn<span aria-hidden="true">.</span></Link>
       <nav className="top-nav" aria-label="セクションナビゲーション">
-        {NAV_ITEMS.map(([label, id]) => <a key={id} href={`#${id}`}>{label}</a>)}
+        {NAV_ITEMS.map(([label, id]) => <Link key={id} href={`#${id}`} type="inherit" color="secondary">{label}</Link>)}
       </nav>
     </header>
   );

@@ -1,4 +1,11 @@
-@import "tailwindcss";
+@layer reset, theme, base, astryx-base, astryx-theme, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "@astryxdesign/core/reset.css";
+@import "@astryxdesign/core/astryx.css";
+@import "@astryxdesign/theme-neutral/theme.css";
+@import "tailwindcss/utilities.css" layer(utilities);
 
 @theme {
   --color-bg: #0b1726;
@@ -12,19 +19,36 @@
   --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   --animate-status-pulse: status-pulse 2.4s ease-in-out infinite;
 }
+/* theme-neutral の reset 層が素の見出し・段落へ当てる文字組みを戻し、Astryx 化していない節は継承で組む */
+@layer base {
+  :where(h1, h2, h3, h4, h5, h6, p, small, code, pre) { font-family: revert; font-size: revert; font-weight: revert; line-height: revert; color: revert; }
+}
+/* Astryx の :root と theme scope が --color-accent 等を後勝ちで上書きするため、サイトの配色と書体へ揃え直す */
+:root, [data-astryx-theme] {
+  --color-accent: #79d9be;
+  --color-text-accent: var(--color-accent-light);
+  --color-icon-accent: var(--color-accent-light);
+  --color-on-accent: var(--color-bg);
+  --color-text-primary: var(--color-text);
+  --color-text-secondary: var(--color-muted);
+  --color-background-card: #10203480;
+  --font-family-body: var(--font-sans);
+  --font-family-heading: var(--font-sans);
+  --font-family-code: var(--font-mono);
+}
 @keyframes status-pulse { 50% { opacity: .5; } }
 body { background: var(--color-bg); color: var(--color-text); }
 ::selection { background: #79d9be40; }
 a, button { -webkit-tap-highlight-color: transparent; }
 a { transition: color .15s, border-color .15s, background-color .15s; }
-a:hover { color: var(--color-accent-light); }
+a:not(.astryx-button):hover { color: var(--color-accent-light); }
 :focus-visible { outline: 2px solid var(--color-accent-light); outline-offset: 5px; }
 section { scroll-margin-top: 32px; }
 .site-shell { min-height: 100vh; }
 .portfolio-layout { max-width: 1160px; margin: auto; padding: 0 48px; }
 .site-header { min-height: 96px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-bottom: 1px solid #a0b0c225; }
 .wordmark { font-size: 22px; font-weight: 700; letter-spacing: -.04em; }
-.wordmark span, .hero h1 span { color: var(--color-accent); }
+.wordmark [aria-hidden="true"], .hero h1 span { color: var(--color-accent); }
 .top-nav { display: flex; flex-wrap: wrap; column-gap: 28px; }
 .top-nav a { display: flex; align-items: center; min-height: 44px; font-size: 13px; color: var(--color-muted); }
 .top-nav a:hover { color: var(--color-accent-light); }
@@ -47,12 +71,15 @@ section { scroll-margin-top: 32px; }
 .section-heading span { font: 11px var(--font-mono); color: var(--color-accent); }
 .section-heading::after { content: ''; height: 1px; flex: 1; background: #a0b0c225; margin-left: 12px; }
 .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.project-grid > article { min-width: 0; }
 .project-card { min-width: 0; border: 1px solid #a0b0c225; border-radius: 10px; background: #10203480; padding: 30px; }
-.project-card:first-child { grid-column: 1 / -1; border-top: 2px solid #79d9be90; }
+.project-grid > article:first-child { grid-column: 1 / -1; }
+.project-grid > article:first-child .project-card { border-top: 2px solid #79d9be90; }
 .project-card h3 { line-height: 1.6; font-size: 21px; }
 .project-name { display: block; font-weight: 700; overflow-wrap: anywhere; }
 .project-subtitle { display: block; margin-top: 4px; font-size: 15px; font-weight: 500; color: var(--color-muted); }
-.project-card p, .project-card li { font-size: 15px; line-height: 1.9; }
+.project-card p, .project-card li, .project-card .decision-text { font-size: 15px; line-height: 1.9; }
+.project-card .decision-text { color: var(--color-muted); }
 .pipeline-steps { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 12px; font-size: 13px; counter-reset: step; }
 .pipeline-step { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
 .pipeline-step::before { counter-increment: step; content: counter(step,decimal-leading-zero); font: 12px var(--font-mono); color: var(--color-accent); }
