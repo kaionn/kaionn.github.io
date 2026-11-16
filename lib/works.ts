@@ -60,8 +60,8 @@ export const WORKS: readonly Work[] = [
     liveUrl: "https://tech-news.kaion-lab.com/",
     liveLabel: "読む",
     githubUrl: "https://github.com/kaionn/tech-news-daily",
-    imageSrc: "/works/tech-news-daily.jpg",
-    imageAlt: "Tech News Daily の画面。当日のダイジェストと見出しが見える",
+    imageSrc: "/works/tech-news-daily.png",
+    imageAlt: "Tech News Daily の題字と「今朝のテックを、ひと目で。」",
     tags: ["自動更新", "ニュース", "コード公開"],
   },
   {
@@ -72,8 +72,8 @@ export const WORKS: readonly Work[] = [
     liveUrl: "https://tech-learn.kaion-lab.com/",
     liveLabel: "読む",
     githubUrl: "https://github.com/kaionn/tech-learning-daily",
-    imageSrc: "/works/tech-learning-daily.jpg",
-    imageAlt: "Tech Learning Daily の画面。当日の解説記事が見える",
+    imageSrc: "/works/tech-learning-daily.png",
+    imageAlt: "Tech Learning Daily の題字と「なぜ？が解ける、毎朝の基礎解説。」",
     tags: ["自動更新", "技術解説", "コード公開"],
   },
 ];
