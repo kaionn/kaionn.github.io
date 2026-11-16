@@ -52,8 +52,6 @@ export const WORKS: readonly Work[] = [
     liveLabel: "遊ぶ",
     imageSrc: "/works/uragiri-reversi.png",
     imageAlt: "裏切りリバーシの題字と『寝返った石が、しゃべる。』の副題、石が吹き出しでしゃべる盤面",
-    imageWidth: 1200,
-    imageHeight: 630,
     tags: ["ゲーム", "ブラウザ", "AI 対戦"],
   },
   {
