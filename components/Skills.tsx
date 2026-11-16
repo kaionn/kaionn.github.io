@@ -75,7 +75,7 @@ export default function Skills() {
               {category.items.map((item) => (
                 <span
                   key={item}
-                  className={`skill-chip rounded border border-white/10 px-[14px] py-2 text-sm ${TAG_STYLES[category.color]}`}
+                  className={`rounded border border-white/10 px-[14px] py-2 text-sm ${TAG_STYLES[category.color]}`}
                 >
                   {item}
                 </span>

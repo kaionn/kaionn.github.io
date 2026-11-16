@@ -82,7 +82,7 @@ section { scroll-margin-top: 32px; }
 .project-card { min-width: 0; border: 1px solid #a0b0c225; border-radius: 10px; background: linear-gradient(180deg, #13263c99, #10203480 60%); padding: 30px; transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
 .project-card-featured { border-top: 2px solid #79d9be90; }
 .work-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; padding: 0; list-style: none; }
-.work-tags li { font: 11px var(--font-mono); letter-spacing: .02em; color: var(--color-accent-light); background: #79d9be14; border: 1px solid #79d9be33; border-radius: 999px; padding: 3px 10px; }
+.project-card .work-tags li { font: 11px/1.5 var(--font-mono); letter-spacing: .02em; color: var(--color-accent-light); background: #79d9be14; border: 1px solid #79d9be33; border-radius: 999px; padding: 3px 10px; }
 @media (hover: hover) {
   .project-card:hover, .project-card:focus-within { transform: translateY(-4px); border-color: #79d9be55; box-shadow: 0 14px 36px -18px #79d9be55; }
   .project-card:hover .work-thumb, .project-card:focus-within .work-thumb { transform: scale(1.04); }
@@ -101,10 +101,7 @@ section { scroll-margin-top: 32px; }
 .pipeline-label { color: var(--color-text); overflow-wrap: anywhere; }
 #about > div { max-width: 780px; }
 #skills > div { max-width: 780px; }
-.skill-label { display: flex; align-items: center; gap: 8px; }
-.skill-label svg { flex-shrink: 0; color: var(--color-accent); }
-.skill-chip { transition: border-color .15s, background-color .15s; }
-.skill-chip:hover { border-color: #79d9be55; }
+.skill-label svg { display: inline-block; vertical-align: -2px; margin-right: 8px; color: var(--color-accent); }
 #career > div { max-width: 780px; }
 #career .text-sm { font-size: 15px; line-height: 1.9; }
 .contact-panel { border-top: 1px solid #a0b0c225; padding-top: 44px; }
@@ -119,7 +116,7 @@ section { scroll-margin-top: 32px; }
 @keyframes hero-glow { to { opacity: .65; } }
 @keyframes section-reveal { from { opacity: 0; transform: translateY(24px); } }
 @supports (animation-timeline: view()) {
-  @media (prefers-reduced-motion: no-preference) {
+  @media screen and (prefers-reduced-motion: no-preference) {
     .portfolio-main > section:not(.hero) { animation: section-reveal linear both; animation-timeline: view(); animation-range: entry 0% entry 35%; }
   }
 }
